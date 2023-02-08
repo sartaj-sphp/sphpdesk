@@ -43,7 +43,7 @@ file and select open with and choose sphpserver application path.OR you can inst
 res/sphpserver folder
 
 
-Sphp Server(install with NPM) Commands:-
+Sphp Server Commands:-
 -------------
 
 * Run Desk App mode:- sphpdesk proj_dir/app.sphp
