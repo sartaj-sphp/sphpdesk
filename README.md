@@ -42,6 +42,54 @@ For run with double click on file app.sphp, you need to register .sphp file type
 file and select open with and choose sphpserver application path.OR you can install on your desktop with installation file inside 
 res/sphpserver folder
 
+Use With Electron:-
+-------------
+
+Add in your package.json
+
+  "dependencies": {
+    "sphpdesk": "^1.1.2"
+  }
+
+in main process file main.js
+
+const sphpdesk = require('sphpdesk');
+const { app, BrowserWindow } = require('electron');
+var ls = null;
+var win = null;
+var mhost = 'localhost';
+var mport = 8000;
+
+const createWindow = () => {
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+        nodeIntegration: true,    
+    }
+  });
+  win.loadURL("http://" + mhost + ":" + mport);
+};
+
+app.whenReady().then(async () => {
+    ret = await sphpdesk.run_sphp_server("localhost",0,0,__dirname);
+    mhost = ret.host;
+    mport = ret.port;
+    ls = ret.SphpServer;
+    createWindow();
+    app.on('activate', () => {
+        if (BrowserWindow.getAllWindows().length === 0){
+            createWindow();
+         }
+    })
+
+});
+
+app.on('window-all-closed', () => {
+    ls.kill('SIGINT');
+  if (process.platform !== 'darwin') app.quit();
+})
+
 
 Sphp Server Commands:-
 -------------
