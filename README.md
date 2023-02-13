@@ -47,12 +47,15 @@ Use With Electron:-
 
 Add in your package.json
 
+```
   "dependencies": {
     "sphpdesk": "^1.1.2"
   }
+```
 
 in main process file main.js
 
+```javascript
 const sphpdesk = require('sphpdesk');
 const { app, BrowserWindow } = require('electron');
 var ls = null;
@@ -89,7 +92,7 @@ app.on('window-all-closed', () => {
     ls.kill('SIGINT');
   if (process.platform !== 'darwin') app.quit();
 })
-
+```
 
 Sphp Server Commands:-
 -------------
