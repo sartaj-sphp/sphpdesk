@@ -60,7 +60,7 @@ Add in your package.json
 
 ```
 Copy SartajPHP project files inside your electron project folder.
-start.php file should be inside the www folder.
+start.php file should be inside the www folder or what ever you give name for it.
 ret = await sphpdesk.run_sphp_server("localhost",0,0,www_folder);
 ```
 
