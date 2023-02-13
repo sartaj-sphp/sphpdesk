@@ -26,16 +26,21 @@ Installation
 How to install Sphp Server binary package?
 
 * With NPM:----
-
+```
 npm install -g sphpdesk
+```
 
 * After Installation run command
 
+```
 npx sphpdesk
+```
 
 or direct call if symlink work, sometime nmp doesn't create symlink for binary
 
+```
 sphpdesk
+```
 
 It runs default project inside res folder. If you want to run directly sphpserver then you can create a symlink inside your bin folder.
 For run with double click on file app.sphp, you need to register .sphp file type with sphpserver application. Right click on app.sphp
@@ -104,6 +109,8 @@ Sphp Server Commands:-
 
 app.sphp file settings:-
 -------------
+
+```
 You can over-write these settings with console arguments:-
 "project": Name of project,
 "type": Run Mode:- srvapp or deskapp or consoleapp,
@@ -124,7 +131,7 @@ or "" empty for inbuilt browser, these browser need libraries installed on syste
 
 command line example:-
 ./sphpserver-linux --proj "/home/admin/web/domain.com/public_html" --type "srvp3" --port 8001 --host "domain.com" --php "php" --key "/home/admin/conf/web/ssl.domain.com.key" --cert "/home/admin/conf/web/ssl.domain.com.crt" --ca "/home/admin/conf/web/ssl.domain.com.pem"
-
+```
 
 Documentation
 -------------
