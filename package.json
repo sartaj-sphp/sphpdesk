@@ -1,6 +1,6 @@
 {
   "name": "sphpdesk",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Sartaj PHP Desktop Interface",
   "main": "index.js",
   "license": "MIT",
