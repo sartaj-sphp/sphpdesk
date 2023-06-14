@@ -1,7 +1,7 @@
 # sphpdesk
 <h1>Sphp Server for SartajPHP Framework</h1>
 <p align="center"><a href="http://sartajphp.com" target="_blank">
-    <img src="http://sartajphp.com/temp/default/images/logo.png">
+    <img src="logo.png">
 </a></p>
 
 Info
