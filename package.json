@@ -10,7 +10,8 @@
     "sphpdesk": "cli.js"
   },
   "scripts": {
-    "sphpdesk": "node ."
+    "sphpdesk": "node .",
+    "postinstall": "node ./postinstall.js"
   },
 "keywords": [
     "php",
