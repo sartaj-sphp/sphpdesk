@@ -54,7 +54,7 @@ Add in your package.json
 
 ```
   "dependencies": {
-    "sphpdesk": "^1.1.2"
+    "sphpdesk": "^1.2.2"
   }
 ```
 

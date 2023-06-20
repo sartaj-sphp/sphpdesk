@@ -20,7 +20,7 @@ ExecutePath = path.dirname(require.main.filename);
 
 function start2(){ 
     //var start = (process.platform == 'darwin'? 'open': process.platform == 'win32'? "start": "xdg-open");
-    var cmd = (process.platform == 'darwin'? 'sh': process.platform == 'win32'? ExecutePath + '\\res\\sphpserver\\sphpserver-win.exe': ExecutePath + '/res/sphpserver/sphpserver-linux');
+    var cmd = (process.platform == 'darwin'? 'sh': process.platform == 'win32'? ExecutePath + '\\sphpserver\\sphpserver-win.exe': ExecutePath + '/sphpserver/sphpserver-linux');
     if(process.platform == 'win32'){
         blnDeta = false;
     }

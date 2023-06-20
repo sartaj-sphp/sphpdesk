@@ -3,7 +3,7 @@ const net = require("net");
 const { spawn } = require('child_process');
 
 ExecutePath = __dirname;
-var cmd = (process.platform == 'darwin' ? 'sh' : process.platform == 'win32' ? ExecutePath + '\\res\\sphpserver\\sphpserver-win.exe' : ExecutePath + '/res/sphpserver/sphpserver-linux');
+    var cmd = (process.platform == 'darwin'? 'sh': process.platform == 'win32'? ExecutePath + '\\sphpserver\\sphpserver-win.exe': ExecutePath + '/sphpserver/sphpserver-linux');
 async function findPort(ip, port) {
     let myself = this;
     let result = false;
