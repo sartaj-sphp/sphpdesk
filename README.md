@@ -16,7 +16,7 @@ has lots of reusable **PHP components**. SartajPHP is giving life to lots of web
 
 VS Code Extension Available on Market Place search SartajPHP in VS code
 ------------
-For more info see:- <a href="https://github.com/sartaj-singh/vscode-sartajphp-intellisense">https://github.com/sartaj-singh/vscode-sartajphp-intellisense</a>
+For more info see:- <a href="https://github.com/Gold-Samiar/vscode-sartajphp-intellisense">https://github.com/Gold-Samiar/vscode-sartajphp-intellisense</a>
 
 Installation
 ------------
@@ -165,9 +165,9 @@ If you discover a security vulnerability within SartajPHP PHP Framework, please 
 
 
 [1]: https://www.sartajphp.com
-[2]: https://github.com/sartaj-singh/SartajPHP-Framework
+[2]: https://github.com/Gold-Samiar/SartajPHP-Framework
 [3]: https://www.youtube.com/channel/UCKENEpj-PZvpS2lC4cqh-7g
 [4]: https://www.facebook.com/DevelopmentFramework/
-[5]: https://github.com/sartaj-singh/vscode-sartajphp-intellisense
+[5]: https://github.com/Gold-Samiar/vscode-sartajphp-intellisense
 
 
