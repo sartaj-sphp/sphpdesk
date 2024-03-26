@@ -54,7 +54,7 @@ Add in your package.json
 
 ```
   "dependencies": {
-    "sphpdesk": "^1.2.2"
+    "sphpdesk": "^1.3.0"
   }
 ```
 
@@ -110,6 +110,8 @@ Sphp Server Commands:-
 
 * Run Desk App mode:- sphpdesk proj_dir/app.sphp
 * Run Server App mode:- sphpdesk --proj proj_dir
+* Run as Script:- sphpdesk script myscript.php 
+* Create Script:- sphpdesk createscript myscript 
 * Read Settings from app.sphp and you can change running mode of sphpserver
 
 

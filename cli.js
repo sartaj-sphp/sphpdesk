@@ -51,6 +51,28 @@ function start2(){
       } finally {
     //process.exit();
   }
+}
+
+function startP(cmd,args,options){ 
+    try{
+           const ls = spawn(cmd, args,options);
+            ls.stdin.setEncoding('utf-8');
+            ls.stdout.setEncoding('utf-8');
+            ls.stdout.on('data', function(line){
+		        console.log(line);
+            });
+        	ls.stderr.on('data', function (data) {
+		        console.error('stderr: ' + data);
+        	});
+
+        	ls.on('exit', function (code, signal) {
+		        console.log('exit code ' + code);
+                process.exit();
+        	});
+    } catch(e) {
+        console.error(e);
+      } finally {}
+  }
 
 /*
     var child = require('child_process').exec(cmd + strparam);
@@ -66,8 +88,13 @@ function start2(){
             console.error(error);
     });
 */
+
+
+if(['script','createscript'].includes(process.argv[2])){
+    var phpp1 = (process.platform == 'darwin'? 'sh': process.platform == 'win32'? ExecutePath + '\\bin\\win-x32\\php\\php.exe': ExecutePath + '/bin/linux-x64/php/php');
+	var arg1 = ['-f',ExecutePath + '/scripts/'+ process.argv[2] +'run.php', '--'];
+	arg1 = arg1.concat(process.argv.slice(3));
+	startP(phpp1,arg1,{});
+}else{
+	start2();
 }
-
-
-start2();
-
