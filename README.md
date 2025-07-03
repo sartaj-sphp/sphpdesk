@@ -1,5 +1,5 @@
 # sphpdesk
-<h1>Sphp Server for SartajPHP Framework</h1>
+<h1>SartajPhp (sphp) Server for SartajPHP Framework</h1>
 <p align="center"><a href="http://sartajphp.com" target="_blank">
     <img src="logo.png">
 </a></p>
@@ -59,7 +59,8 @@ Add in your package.json
 ```
 
 ```
-Copy SartajPHP project files inside your electron project folder.
+Copy SartajPHP project files inside your electron project folder. Or Vs Code use 
+to genearte SartajPhp Project or use copy demo project from examples in github page. 
 start.php file should be inside the www folder or what ever you give name for it.
 ret = await sphpdesk.run_sphp_server("localhost",0,0,www_folder);
 ```
@@ -71,8 +72,12 @@ const sphpdesk = require('sphpdesk');
 const { app, BrowserWindow } = require('electron');
 var ls = null;
 var win = null;
-var mhost = 'localhost';
+var mhost = '127.0.0.1';
 var mport = 8000;
+const path = require('path');
+
+// run demo project in examples folder
+var wwwpath = path.resolve(__dirname + "/../demo");
 
 const createWindow = () => {
   win = new BrowserWindow({
@@ -86,7 +91,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(async () => {
-    ret = await sphpdesk.run_sphp_server("localhost",0,0,__dirname);
+    ret = await sphpdesk.run_sphp_server("127.0.0.1",0,0,wwwpath);
     mhost = ret.host;
     mport = ret.port;
     ls = ret.SphpServer;
@@ -102,16 +107,17 @@ app.whenReady().then(async () => {
 app.on('window-all-closed', () => {
     ls.kill('SIGINT');
   if (process.platform !== 'darwin') app.quit();
-})
+});
 ```
 
-Sphp Server Commands:-
+Sphpdesk with Sphp Server Commands:-
 -------------
 
 * Run Desk App mode:- sphpdesk proj_dir/app.sphp
 * Run Server App mode:- sphpdesk --proj proj_dir
 * Run as Script:- sphpdesk script myscript.php 
 * Create Script:- sphpdesk createscript myscript 
+* Run Composer update:- sphpdesk updatesphp
 * Read Settings from app.sphp and you can change running mode of sphpserver
 
 

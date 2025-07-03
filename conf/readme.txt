@@ -1,3 +1,10 @@
+Installation on window is portable.
+
+installation on Linux:-
+Install Open SSL
+sudo apt install libssl-dev
+sudo apt install openssl 1.0.2
+
 command to run server base app
 ./sphpserver-linux --proj "/home/admin/web/domain.com/public_html" --type "srvp3" --port 8001 --host "domain.com" --php "php" --key "/home/admin/conf/web/ssl.domain.com.key" --cert "/home/admin/conf/web/ssl.domain.com.crt" --ca "/home/admin/conf/web/ssl.domain.com.pem"
 
@@ -24,3 +31,5 @@ or on windows
 sphpserver-win
 
 
+run phar file
+D:\www\sphpdesk\sphpserver_fpc\sphpserver.exe D:\www\demo5\dist\demo5_exec.phar

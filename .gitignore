@@ -3,5 +3,6 @@
 /node_modules/
 package-lock.json
 /vendor/
+/sphpserver_old/
 /composer.lock
 

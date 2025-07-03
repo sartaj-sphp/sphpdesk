@@ -1,5 +1,8 @@
 const path = require("path");
 const net = require("net");
+const basicApp = require('./snode/BasicApp');
+const startEngine = require('./snode/StartEngine').StartEngine;
+
 const { spawn } = require('child_process');
 
 ExecutePath = __dirname;
@@ -38,7 +41,7 @@ async function findPort2(host = 'localhost') {
     return port;
 }
 
-async function runSphpServer(host = 'localhost', port = 0, ssl = 0, www = '') {
+async function runSphpServer(host = '127.0.0.1', port = 0, ssl = 0, www = '') {
     let ls = null;
     try {
         if (port == 0) port = await findPort2(host);
@@ -66,4 +69,8 @@ async function runSphpServer(host = 'localhost', port = 0, ssl = 0, www = '') {
 
 }
 
-module.exports = { "SphpServerPath": cmd, "run_sphp_server": runSphpServer };
+function getSphpCom(){
+	return startEngine;
+}
+
+module.exports = { "SphpServerPath": cmd, "run_sphp_server": runSphpServer, get_sphp_com: getSphpCom, "BasicApp": basicApp };
